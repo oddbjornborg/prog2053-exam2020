@@ -18,7 +18,7 @@ class UsersList extends LitElement {
       uname: '',
       firstName: '',
       lastName: '',
-      oldPwd: '',
+      oldpwd: '',
       pwd: ''
     };
 
@@ -32,6 +32,7 @@ class UsersList extends LitElement {
     user.pwd = ''
     user.oldPwd = ''
     this.selectedUser = user;
+    console.log("User " + user.uid + " selected.");
   }
 
   static get styles() {
