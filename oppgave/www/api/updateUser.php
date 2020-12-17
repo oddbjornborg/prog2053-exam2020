@@ -65,7 +65,7 @@ if ($_POST['oldpwd']=='') { // No old password, update only first and last name
           echo json_encode(array('status'=>'fail', 'msg'=>'Unable to update user'));
         }
       } else {
-        echo json_encode(array('status'=>'fail', 'msg'=>'Incorrect PWD for user'));
+        echo json_encode(array('status'=>'fail', 'msg'=>'Incorrect PWD for user', 'p1'=>$_POST['oldpwd'], 'p2'=>$res['pwd']));
       }
     } else {
       echo json_encode(array('status'=>'fail', 'msg'=>'Unable to find user'));
